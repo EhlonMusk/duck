@@ -20,6 +20,9 @@ body {
   font-family: lexie, "Lucida Grande", "Lucida Sans", "Lucida Sans Regular",
     "Lucida Sans Unicode", sans-serif, sans-serif, Arial, Helvetica;
   background-color: #e8f4fc;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 .purpleColor {
