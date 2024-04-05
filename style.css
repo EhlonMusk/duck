@@ -422,6 +422,32 @@ section {
   scale: 1.1;
 }
 
+.singleButton {
+  margin: 1rem 0;
+}
+
+section .singleButton a {
+  display: block;
+  background-color: transparent;
+  padding: 12px 100px;
+  border: 3px solid #f3d786;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 500;
+  color: black;
+  background-color: white;
+  max-width: 85vw;
+  margin: auto;
+  box-shadow: #f3d786 0px 0px 0px 1px inset, #f1cc5c -10px 10px 0px 3px;
+}
+
+section .singleButton a:hover {
+  scale: 1.1;
+  transition: 0.1s ease;
+}
+
 .sectionTwo {
   background-color: #e8f4fc;
   height: 100vh;
