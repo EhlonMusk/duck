@@ -30,6 +30,13 @@ h1 {
   font-size: 5rem;
 }
 
+.rmtitle {
+  font-size: 5rem;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
 h2 {
   font-size: 3rem;
 }
@@ -623,7 +630,7 @@ div.scroll-container img {
 }
 
 .sectionSix {
-  height: 100vh;
+  height: auto;
 }
 
 .faq {
@@ -733,6 +740,14 @@ footer {
 
   .blurb div {
     font-size: 1.25rem;
+  }
+
+  .sectionTwo {
+    height: auto;
+  }
+
+  .sectionFour {
+    height: auto;
   }
 }
 
