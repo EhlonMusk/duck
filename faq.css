@@ -1,0 +1,66 @@
+summary {
+  font-size: 1.25rem;
+  font-weight: 600;
+  background-color: white;
+  border-radius: 1rem;
+  border: 3px solid #f3d786;
+  color: black;
+  padding: 1rem 3rem;
+  margin-bottom: 2rem;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+  box-shadow: #f3d786 0px 0px 0px 1px inset, #f1cc5c -10px 10px 0px 3px;
+}
+details > summary::after {
+  position: absolute;
+  content: "+";
+  right: 20px;
+}
+details[open] > summary::after {
+  position: absolute;
+  content: "-";
+  right: 20px;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+summary:hover {
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.45),
+    rgba(255, 255, 255, 0.55)
+  );
+  scale: 1.025;
+  transition: 0.25s ease;
+}
+
+details[open] summary ~ * {
+  animation: sweep 0.5s ease-in-out;
+}
+@keyframes sweep {
+  0% {
+    opacity: 0;
+    margin-top: -10px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+
+details {
+  margin-top: 1rem;
+  width: 80vw;
+}
+
+.faq__content p {
+  color: black;
+  font-size: 1.25rem;
+
+@media (max-width: 700px) {
+  summary {
+    font-size: 1rem;
+  }
+}

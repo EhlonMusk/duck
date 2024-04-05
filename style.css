@@ -1,0 +1,855 @@
+@font-face {
+  font-family: lexie;
+  src: url(LovelexieHandwritten.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+body {
+  color: #443426;
+  font-family: lexie, "Lucida Grande", "Lucida Sans", "Lucida Sans Regular",
+    "Lucida Sans Unicode", sans-serif, sans-serif, Arial, Helvetica;
+  background-color: #e8f4fc;
+}
+
+.purpleColor {
+  color: #f3dfa1;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+#copyaddress {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 6vw;
+}
+
+h4 {
+  font-size: 2.5rem;
+}
+
+.disclaimer {
+  font-size: 0.3rem;
+}
+
+.copyright {
+  font-size: 1rem;
+}
+
+.copybundle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+  align-items: center;
+  background-color: transparent;
+  &.can-animate {
+    transition: transform 0.3s ease, visibility 0s 0.3s linear;
+  }
+  &.is-fixed {
+    background-color: transparent;
+    position: fixed;
+    transform: translate3d(0, -100%, 0);
+  }
+  &.scroll-up {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+aside {
+  position: fixed;
+  transition: right 0.4s ease;
+  right: -320px;
+  width: 320px;
+  background-color: #fff;
+  padding: 80px 40px;
+  z-index: 4;
+  height: 100vh;
+  top: 0;
+}
+
+aside.active {
+  right: 0;
+}
+
+aside a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  padding: 12px 0;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+aside button.close {
+  font-size: 35px;
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  font-weight: 100;
+  cursor: pointer;
+}
+
+.backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(5px);
+}
+
+.backdrop.active {
+  display: block;
+}
+
+header .logo {
+  display: inline-block;
+  background-image: url(images/ducktwerking.gif);
+  background-size: 5rem 5rem;
+  width: 5rem;
+  height: 5rem;
+}
+
+#menuBtn {
+  font-size: 3rem;
+}
+
+.headerBtns,
+#menuBtn {
+  padding: 5px 10px;
+}
+
+.headerBtns:hover,
+#menuBtn:hover {
+  color: yellow;
+  transition: 0.25s ease;
+}
+
+header nav.center {
+  text-align: center;
+  margin-left: -5rem;
+  font-size: 1.8rem;
+}
+
+header nav.right {
+  text-align: right;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  font-weight: bolder;
+}
+
+.desktop {
+  display: none;
+}
+
+.splash {
+  position: fixed;
+  width: 40%;
+  height: auto;
+  top: 25%;
+  left: 25%;
+  transform: translate(-25%, -25%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7d05e;
+  transition: all ease-in-out 1000ms;
+  z-index: 2;
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+.hidden {
+  transition: 0.5s;
+  display: none;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+.splashtop {
+  display: flex;
+  width: 100%;
+  padding: 1rem 1rem 0 1rem;
+}
+
+.splashtopmessage {
+  width: 100%;
+  text-align: center;
+}
+
+.splashtopsplit {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  margin: 1rem;
+  background-color: white;
+}
+
+.splashbtns {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.splashbtnexit {
+  cursor: pointer;
+  background-color: white;
+  padding: 0.1rem 0.2rem;
+}
+
+.splashbtnone,
+.splashbtntwo {
+  cursor: pointer;
+  background-color: white;
+  padding: 0.5rem 3rem;
+  border-radius: 0.5rem;
+}
+
+.splashbtnone:hover,
+.splashbtntwo:hover,
+.splashbtnexit:hover {
+  background-color: #e7e7e7;
+}
+
+.splashtext {
+  font-size: 1.25rem;
+}
+
+.epikduckicon {
+  height: auto;
+  width: 10vw;
+  margin-left: 1rem;
+}
+
+.splashquestion {
+  font-size: 2rem;
+  text-align: center;
+  margin-left: 1rem;
+}
+
+.container {
+  overflow-y: scroll;
+  scroll-snap-type: y proximity;
+  -webkit-overflow-scrolling: touch;
+  background-color: #e8f4fc;
+  position: relative;
+}
+
+.contentHome {
+  width: 100vw;
+  height: 100vh;
+  padding: 12.5vh 5vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.content {
+  width: 100vw;
+  height: auto;
+  padding: 12.5vh 5vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+section {
+  height: auto;
+  background-size: cover;
+  background-position: center center;
+}
+
+.sectionOne {
+  display: block;
+  background-color: #e8f4fc;
+  height: 100vh;
+  background-size: 300px 300px;
+  background-image: url("images/duckdancing.gif");
+}
+
+.homeContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.homeTitle {
+  font-weight: bolder;
+  font-size: 4.1rem;
+}
+
+.homeLogo {
+  width: auto;
+  height: 85vh;
+  position: absolute;
+  bottom: 0;
+}
+
+.duck {
+  width: auto;
+  height: 85vh;
+  animation: wdszoom0 1s linear 0s infinite alternate;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.imglinks {
+  gap: 1rem;
+  display: flex;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.linklogos {
+  display: block;
+  width: 90px;
+  height: auto;
+  transition: transform 0.2s;
+  animation: fadeIn 3s;
+}
+
+.linklogos:hover {
+  transform: scale(1.1);
+}
+
+@-webkit-keyframes wdszoom0 {
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+#copytoclipboardca {
+  display: none;
+}
+
+.addressTitle {
+  font-size: 0.8rem;
+  font-weight: bolder;
+}
+
+.address {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  font-size: 1.5rem;
+}
+
+#btn-copy {
+  width: 50px;
+  height: 50px;
+  transition: all 0s;
+}
+
+#btn-copy:hover {
+  scale: 1.1;
+}
+
+.sectionTwo {
+  background-color: #e8f4fc;
+  height: 100vh;
+}
+
+#blurb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 3rem;
+  border-radius: 3rem;
+}
+
+.logoBig {
+  background-image: url(images/duck.png);
+  background-size: 17vw 20vw;
+  width: 17vw;
+  height: 20vw;
+  margin: 1rem 0;
+}
+
+@keyframes getSmaller {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.logoBig:hover {
+  scale: 1.1;
+}
+
+.logoBig:focus {
+  scale: 0.9;
+}
+
+@keyframes bgScroll {
+  0% {
+    background-position: 0px -660px;
+  }
+  100% {
+    background-position: 0px 0px;
+  }
+}
+
+.sectionThree {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e8f4fc;
+  background-image: url("images/duckscrollingbg.png");
+  animation: bgScroll 30s linear infinite;
+}
+
+.tokenomics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60vw;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8));
+  border-radius: 1rem;
+  padding: 3rem;
+  gap: 1rem;
+  color: white;
+}
+
+.sectionFour {
+  background-image: url(images/duckcoinbase.png);
+  height: 100vh;
+}
+
+.animation {
+  opacity: 0;
+  transform: translateX(-300px);
+  transition: all 0.7s ease-out;
+  transition-delay: 0.4s;
+}
+
+.scroll-animation {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+li {
+  list-style-type: none;
+}
+
+.divBoxes {
+  width: auto;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.divBox {
+  border: 3px solid #f3d786;
+  border-radius: 1rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  box-shadow: #f3d786 0px 0px 0px 1px inset, #f1cc5c -10px 10px 0px 3px;
+}
+
+.divBox h2 {
+  padding: 1rem;
+  font-size: 3rem;
+}
+
+.divBox li {
+  font-size: 2.5rem;
+}
+
+.roadmap {
+  border: 4px solid black;
+  height: auto;
+}
+
+.sectionFive {
+  background-color: #e8f4fc;
+  height: auto;
+}
+
+div.scroll-container {
+  position: relative;
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scroll-padding-left: 1rem;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
+  display: flex;
+  width: 400px;
+  border-radius: 1rem;
+}
+
+div.scroll-container img {
+  width: 400px;
+  min-width: auto;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  background-color: #fff;
+  scroll-snap-align: end;
+  scroll-snap-stop: always;
+}
+
+.indicator-tray {
+  position: relative;
+  display: flex;
+  height: 5px;
+  width: 50%;
+  background-color: #eee;
+  margin: 20px auto;
+}
+
+.indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #f3d786;
+}
+
+.sectionSix {
+  height: 100vh;
+}
+
+.faq {
+  margin-top: 3rem;
+}
+
+@-webkit-keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-35px);
+  }
+}
+
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(15px);
+  }
+}
+
+footer {
+  color: #443426;
+  text-align: center;
+  font-size: 1.5rem;
+  height: auto;
+}
+
+.logoLinksFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.linkLogosFooter {
+  display: block;
+  width: 40px;
+  height: auto;
+  transition: transform 0.2s;
+  animation: fadeIn 3s;
+}
+
+.linkLogosFooter:hover {
+  transform: scale(1.15);
+}
+
+.tandx {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 3rem 0;
+}
+
+@media (min-width: 1900px) {
+  html {
+    font-size: 1.25rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 1225px) {
+  .splash {
+    width: 40rem;
+    height: auto;
+    top: 20%;
+  }
+
+  .logoBig {
+    background-size: 35vw 40vw;
+    width: 35vw;
+    height: 40vw;
+  }
+}
+
+@media (min-width: 1100px) {
+  .desktop {
+    display: initial;
+  }
+
+  #menuBtn {
+    display: none;
+  }
+
+  .roadmap {
+    gap: 1rem;
+  }
+
+  .blurb div {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .splash {
+    width: 85vw;
+    height: auto;
+    top: 30%;
+    left: 5%;
+  }
+
+  .epikduckicon {
+    width: 30%;
+    height: auto;
+  }
+
+  .roadmap {
+    border: 4px solid black;
+    width: auto;
+  }
+
+  .linklogos {
+    width: 12.5vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .homeLogo {
+    width: 85vw;
+    height: auto;
+  }
+
+  .duck {
+    width: 85vw;
+    height: auto;
+    margin-bottom: 60%;
+  }
+
+  .content {
+    height: auto;
+  }
+
+  section {
+    height: auto;
+  }
+
+  .sectionOne {
+    height: 100vh;
+  }
+
+  h1 {
+    font-size: 10vw;
+  }
+
+  h2 {
+    font-size: 5vw;
+  }
+
+  h3 {
+    font-size: 9vw;
+  }
+
+  h4 {
+    font-size: 7vw;
+  }
+
+  .homeTitle {
+    font-size: 3.4rem;
+  }
+
+  .tokenomics {
+    width: 90vw;
+    padding: 1rem;
+  }
+
+  #copytoclipboardca {
+    display: initial;
+    background-image: url(images/copytoclipboardca.png);
+    background-size: 8rem 8rem;
+    width: 8rem;
+    height: 8rem;
+  }
+
+  #copytoclipboardca:hover {
+    -webkit-filter: brightness(80%);
+    transition: 0.5s ease;
+  }
+
+  #copytoclipboardca:active {
+    -webkit-filter: brightness(105%);
+    transition: 0s ease;
+  }
+  .addressTitle {
+    display: none;
+  }
+
+  #copyaddress {
+    display: none;
+  }
+
+  #btn-copy {
+    margin-top: 1rem;
+  }
+
+  .blurbdisplay {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+
+  .homeTitle {
+    font-size: 2.5rem;
+  }
+
+  .logoBig {
+    background-size: 70vw 85vw;
+    width: 70vw;
+    height: 85vw;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .splashquestion {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .sectionOne {
+    background-size: 200px 225px;
+  }
+
+  .sectionTwo {
+    height: auto;
+  }
+
+  .sectionFour {
+    height: auto;
+  }
+}

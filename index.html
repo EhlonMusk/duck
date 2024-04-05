@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="image/duck.png" />
+    <link rel="apple-touch-icon" type="image/png" href="images/duck.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="faq.css" />
+    <title>TEH $EPIK DUCK</title>
+  </head>
+  <body>
+
+    <div class="splash">
+      <div class="splashtop">
+      <div class="splashtext splashtopmessage">
+        (1) New Message
+      </div>
+      <div onclick="playExit()" class="splashbtnexit splashtext">
+      ✕</div>
+    </div>
+      <div class="splashtopsplit">
+        <img src="images/duck.png" alt="epikduckicon" class="epikduckicon" />
+        <div class="splashquestion">Do you to be financially saved?</div>
+      </div>
+        <div class="splashbtns">        
+          <div onclick="playYes()" class="splashbtnone splashtext">Yes</div>
+          <div onclick="playNo()" class="splashbtntwo splashtext">No</div>
+        </div>
+    </div>
+
+    <header class="nav-down">
+      <a href="#/"class="logo"></a>
+      <nav class="center desktop">
+        <a href="#sectionTwo" class="headerBtns">Home</a>
+        <a href="#sectionThree" class="headerBtns">Tokenomics</a>
+        <a href="#sectionFour" class="headerBtns">Roadmap</a>
+        <a href="#sectionSix" class="headerBtns">FAQ</a>
+        <a href="https://t.co/zQmM7Tjvtx" target=”_blank” class="headerBtns">Telegram</a>
+        <a href="https://twitter.com/epikduckcoin" target=”_blank” class="headerBtns">Twitter</a>
+      </nav>
+      <nav class="right mobile">
+        <a href="" id="menuBtn">☰</a>
+      </nav>
+    </header>
+
+    <div class="backdrop"></div>
+    <aside>
+      <button class="close">&times;</button>
+      <a href="#sectionTwo" class="menuBtns">Home</a>
+      <a href="#sectionThree" class="menuBtns">Tokenomics</a>
+      <a href="#sectionFour" class="menuBtns">Roadmap</a>
+      <a href="#sectionSix" class="menuBtns">FAQ</a>
+      <a href="https://t.co/zQmM7Tjvtx" target=”_blank” class="menuBtns">Telegram</a>
+      <a href="https://twitter.com/epikduckcoin" target=”_blank” class="menuBtns">Twitter</a>
+      <a href="#/" class="menuBtns">Chart</a>
+      <a href="#/" class="menuBtns">Buy Now</a>
+    </aside>
+
+    <div class="container">
+      <section class="sectionOne">
+        <a id="sectionOne"></a>
+        <div class="contentHome">
+          <div class="homeContent">
+          <div class="homeLogo"><img src="images/duck.png" class="duck"alt=""></div>
+        </div>
+      </div>
+      </section>
+
+      <section class="sectionTwo">
+        <a id="sectionTwo"></a>
+        <div class="content">
+          <div id="blurb">
+          <h1>
+            TEH EPIK DUCK
+          </h1>
+          <h2 class="blurb blurbdisplay">
+            IS COMING!!!
+          </h2>
+          <div class="logoBig" onclick="playQuack()"></div>
+          <h2 class="blurb">Contract Address:</h2>
+          <div class="copybundle">
+          <article id="copyaddress">3BgwJ8b7b9hHX4sgfZ2KJhv9496CoVfsMK2YePevsBRw</article>
+          <a href="#/"
+          ><img
+            onclick="changeImg(this, 'images/checkmark.png');"
+            src="images/copytoclipboard.png"
+            alt="copytoclipboard"
+            id="btn-copy"
+        /></a>
+          </div>
+          <div class="imglinks">
+            <a href="https://twitter.com/epikduckcoin" target="_blank" rel="noopener noreferrer"><img src="images/twittercolor.png" alt="twitterlogo" class="linklogos"></a>
+            <a href="https://t.co/zQmM7Tjvtx" target="_blank" rel="noopener noreferrer"><img src="images/telegramcolor.svg" alt="telegramlogo" class="linklogos"></a>
+            <a href="https://www.dextools.io/app/en/solana/pair-explorer/AZaaQaRhp1ys9VaJBRZYbmPz3JSBSp7m8cSSrLBn4BP9?t=1712302087510"><img src="images/dextoolscolor.png" alt="dextoolslogo" class="linklogos"></a>
+            <a href="https://dexscreener.com/solana/azaaqarhp1ys9vajbrzybmpz3jsbsp7m8cssrlbn4bp9"><img src="images/dscolor.svg" alt="dexScreenerlogo" class="linklogos"></a>
+            <a href="https://solscan.io/token/3BgwJ8b7b9hHX4sgfZ2KJhv9496CoVfsMK2YePevsBRw"><img src="images/solscancolor.png" alt="solScanlogo" class="linklogos"></a>
+            <a href="https://www.coingecko.com/"><img src="images/cgcolor.svg" alt="coingGeckologo" class="linklogos"></a>
+            <a href="https://coinmarketcap.com/"><img src="images/cmccolor.png" alt="coinMarketCaplogo" class="linklogos"></a>
+          </div>
+        </div>
+      </section>
+
+      <a id="sectionThree"></a>
+      <section class="sectionThree">
+        <div class="content">
+          <div class="tokenomics">
+          <h1>
+            Tokenomics
+          </h1>
+            <h2><span class="purpleColor">CIRCULATING SUPPLY:</span></h2> 
+            <h3><span class="purpleColor">8</span>,460,71,000</h3>
+            <h2><span class="purpleColor">BUY & SELL TAX:</span></h2>
+            <h4>0/0</h4>
+            <h2><span class="purpleColor">LP POOL</span></h2>
+            <h4>100% BURNT</h4>
+          </div>
+        </div>
+      </section>
+
+      <section class="sectionFour">
+        <a id="sectionFour"></a>
+        <div class="content">
+          <h1>Roadmap</h1>
+            <div class="divBoxes">
+            <div class="divBox box1 animation">
+              <h2>Phase 1</h2>
+              <ul>
+                <li>• Get duck to a buck</li>
+              </ul>
+            </div>
+            <div class="divBox box4 animation">
+              <h2>Phase 2</h2>
+              <img class="roadmap" src="images/duckstonks.png" alt="">
+            </div>
+        </div>
+      </section>
+
+      <section class="sectionSix">
+        <a id="sectionSix"></a>
+        <div class="content">
+          <h2 class="faqTitle">Frequently Asked Questions</h2>
+          <div class="faq">
+            <details>
+            <summary class="animation">What is $EPIK?</summary>
+            <div class="faq__content">
+              <blockquote class="twitter-tweet"><p lang="en" dir="ltr">3min story of TEH <a href="https://twitter.com/search?q=%24EPIK&amp;src=ctag&amp;ref_src=twsrc%5Etfw">$EPIK</a> DUCK <a href="https://t.co/SmsM79PpQL">pic.twitter.com/SmsM79PpQL</a></p>&mdash; Mando (@rektmando) <a href="https://twitter.com/rektmando/status/1775966033834070314?ref_src=twsrc%5Etfw">April 4, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+          </details>
+            <details>
+              <summary class="animation">How can I buy $EPIK?</summary>
+              <div class="faq__content">
+                <p>You can purchase $EPIK by swapping your $SOL for $EPIK using the official contract address via an approved DEX such as Raydium or Jupiter.</p>
+              </div>
+            </details>
+            <details>
+              <summary class="animation">I still have questions, where can I find the answer?</summary>
+              <div class="faq__content">
+                <p>Join our community on Telegram. We're more than happy to answer any of your ongoing questions.</p>
+                </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="tandx">
+          <div class="logoLinksFooter">
+            <a
+              href="https://twitter.com/epikduckcoin"
+              target="_blank"
+              rel="noopener noreferrer"
+              target=”_blank”
+              ><img
+              src="images/twittercolor.png"
+              alt="twitter"
+              class="linkLogosFooter"
+            /></a>
+            <a
+            href="https://t.co/zQmM7Tjvtx"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+            src="images/telegramcolor.svg"
+            alt="telegramlogo"
+            class="linkLogosFooter"
+            target=”_blank”
+          /></a>
+            <a
+              href="https://www.dextools.io/app/en/solana/pair-explorer/AZaaQaRhp1ys9VaJBRZYbmPz3JSBSp7m8cSSrLBn4BP9?t=1712302087510"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img
+              src="images/dextoolscolor.png"
+              alt="dextools"
+              class="linkLogosFooter"
+            /></a>
+            <a
+            href="https://dexscreener.com/solana/azaaqarhp1ys9vajbrzybmpz3jsbsp7m8cssrlbn4bp9"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+            src="images/dscolor.svg"
+            alt="dexscreener"
+            class="linkLogosFooter"
+          /></a>
+            <a
+              href="https://solscan.io/token/3BgwJ8b7b9hHX4sgfZ2KJhv9496CoVfsMK2YePevsBRw"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img
+              src="images/solscancolor.png"
+              alt="solscanner"
+              class="linkLogosFooter"
+            /></a>
+            <a
+            href="https://www.coingecko.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+            src="images/cgcolor.svg"
+            alt="coingecko"
+            class="linkLogosFooter"
+          /></a>
+          <a
+          href="https://coinmarketcap.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img
+          src="images/cmccolor.png"
+          alt="coinmarketcap"
+          class="linkLogosFooter"
+        /></a>
+            </div>
+          <div class="copyright">Copyright © 2024 TEH $EPIK DUCK</div>
+        </div>
+      </footer>
+      
+    </div>
+    <script src="javascript/nav.js"></script>
+    <script src="javascript/copytoclipboard.js"></script>
+    <script src="javascript/hidenav.js"></script>
+    <script src="javascript/splash.js"></script>
+    <script src="javascript/musictwo.js"></script>
+    <script src="javascript/appear.js"></script>
+    <script src="javascript/duckquack.js"></script>
+  </body>
+</html>
